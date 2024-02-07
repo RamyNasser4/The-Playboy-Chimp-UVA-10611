@@ -27,9 +27,7 @@ int main() {
 			if (heights[mid] < chimpHeight) {
 				start = mid + 1;
 				tallest = heights[mid];
-			} else if (heights[mid] > chimpHeight) {
-				end = mid - 1;
-			} else {
+			}else {
 				end = mid - 1;
 			}
 		}
@@ -38,9 +36,7 @@ int main() {
 			end = n-1;
 			while(start <= end){
 				mid = start + (end - start) / 2;
-				if(heights[mid] < chimpHeight){
-					start = mid + 1;
-				}else if(heights[mid]> chimpHeight){
+				if(heights[mid] > chimpHeight){
 					shortest = heights[mid];
 					end = mid - 1;
 				}else{
